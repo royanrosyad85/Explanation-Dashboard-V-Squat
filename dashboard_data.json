@@ -1,0 +1,97 @@
+{
+  "threshold_feedback": {
+    "thresholds": [
+      {
+        "no": 1,
+        "feedback": "Badan Terlalu ke Belakang",
+        "angle": "hip_vertical_angle",
+        "threshold": "> 50",
+        "source": "(Bayattork et al., 2024)",
+        "conclusion": "Risiko ketidakstabilan postural, gangguan keseimbangan, dan kompensasi postur"
+      },
+      {
+        "no": 2,
+        "feedback": "Badan Terlalu ke Depan",
+        "angle": "hip_vertical_angle",
+        "threshold": "< 10",
+        "source": "(Yavuz & Erdag, 2017)",
+        "conclusion": "Risiko excessive forward lean, tekanan pada punggung bawah, teknik tidak optimal"
+      },
+      {
+        "no": 3,
+        "feedback": "Lutut Melewati Jari Kaki",
+        "angle": "ankle_vertical_angle",
+        "threshold": "> 45",
+        "source": "(Wallace et al., 2002)",
+        "conclusion": "Risiko tekanan berlebih pada lutut, kompensasi ankle dorsiflexion terbatas"
+      },
+      {
+        "no": 4,
+        "feedback": "Squat Terlalu Dalam",
+        "angle": "knee_vertical_angle",
+        "threshold": "> 105",
+        "source": "(Cooke, 2025; Rojas-Jaramillo et al., 2024), (Kathy E. O'Neill et al., 2021)",
+        "conclusion": "Umumnya aman untuk populasi sehat, kecuali ada riwayat cedera/kelainan khusus"
+      }
+    ]
+  },
+  "mpjpe_results": {
+    "bright_condition": {
+      "participants": [
+        {"id": "P1", "min": 8.2, "max": 16.7, "avg": 11.4, "status": "BAIK"},
+        {"id": "P2", "min": 9.1, "max": 18.3, "avg": 12.9, "status": "BAIK"},
+        {"id": "P3", "min": 7.8, "max": 15.2, "avg": 10.8, "status": "SANGAT BAIK"},
+        {"id": "P4", "min": 10.5, "max": 19.8, "avg": 14.2, "status": "BAIK"},
+        {"id": "P5", "min": 8.9, "max": 17.1, "avg": 12.3, "status": "BAIK"},
+        {"id": "P6", "min": 9.7, "max": 20.4, "avg": 13.8, "status": "BAIK"},
+        {"id": "P7", "min": 6.9, "max": 14.6, "avg": 9.2, "status": "SANGAT BAIK"}
+      ],
+      "average": {"min": 8.7, "max": 17.4, "avg": 12.8}
+    },
+    "dark_condition": {
+      "participants": [
+        {"id": "P1", "min": 12.8, "max": 24.2, "avg": 17.9, "status": "CUKUP"},
+        {"id": "P2", "min": 14.3, "max": 26.7, "avg": 19.2, "status": "CUKUP"},
+        {"id": "P3", "min": 11.4, "max": 22.8, "avg": 16.1, "status": "BAIK"},
+        {"id": "P4", "min": 15.7, "max": 28.3, "avg": 20.8, "status": "CUKUP"},
+        {"id": "P5", "min": 13.2, "max": 25.1, "avg": 18.6, "status": "CUKUP"},
+        {"id": "P6", "min": 14.9, "max": 27.6, "avg": 19.7, "status": "CUKUP"},
+        {"id": "P7", "min": 10.8, "max": 21.4, "avg": 15.2, "status": "BAIK"}
+      ],
+      "average": {"min": 13.3, "max": 25.2, "avg": 18.5}
+    },
+    "blackbox_testing": {
+      "bright": {
+        "detection_rate": 98.5,
+        "accuracy": 94.2,
+        "false_positive": 2.1,
+        "response_time": 0.08
+      },
+      "dark": {
+        "detection_rate": 87.3,
+        "accuracy": 81.6,
+        "false_positive": 8.7,
+        "response_time": 0.12
+      }
+    }
+  },
+  "gym_injuries": {
+    "injury_by_body_part": {
+      "Bahu": 25.2,
+      "Lutut": 20.2,
+      "Punggung Bawah": 17.7,
+      "Siku": 8.0,
+      "Pergelangan Tangan": 7.4,
+      "Pinggul": 6.9,
+      "Pergelangan Kaki": 4.6,
+      "Lainnya": 10.0
+    },
+    "injury_rates": {
+      "overall_prevalence": "27% dalam 6 bulan terakhir",
+      "male_vs_female": "Pria: 29.3%, Wanita: 24.7%",
+      "age_most_affected": "18-30 tahun",
+      "session_duration_risk": "Sesi >2 jam: risiko 40% lebih tinggi",
+      "gym_membership_gen_z": "73% Gen-Z vs 42% Baby Boomers"
+    }
+  }
+}

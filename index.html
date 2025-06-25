@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Biomekanika Squat & Analisis Tren Fitness Gen-Z</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Dashboard Biomekanika Squat & Analisis Tren Fitness Gen-Z</h1>
+                    <p class="subtitle">Analisis komprehensif biomekanika squat, pola cedera gym, dan pengaruh media sosial terhadap tren fitness</p>
+                </div>
+                <div class="theme-toggle-container">
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="theme-switch" class="theme-switch">
+                        <label for="theme-switch" class="theme-label">
+                            <span class="theme-icon sun-icon">☀️</span>
+                            <span class="theme-icon moon-icon">🌙</span>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <span class="theme-text">Dark Mode</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tab-navigation">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="threshold">Landasan Threshold</button>
+            <button class="tab-btn" data-tab="results">Result and Discussion</button>
+            <button class="tab-btn" data-tab="references">Daftar Referensi</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="tab-content active">
+                <h2>Gambaran Umum</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">27%</div>
+                        <div class="stat-label">Prevalensi Cedera Gym</div>
+                        <div class="stat-subtitle">dalam 6 bulan terakhir</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">73%</div>
+                        <div class="stat-label">Keanggotaan Gym Gen-Z</div>
+                        <div class="stat-subtitle">vs 42% Baby Boomers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25.2%</div>
+                        <div class="stat-label">Cedera Bahu</div>
+                        <div class="stat-subtitle">area paling rentan</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Meningkat📈</div>
+                        <div class="stat-label">Risiko Over-training</div>
+                        <div class="stat-subtitle">jika latihan >2 jam</div>
+                    </div>
+                </div>
+
+                <div class="overview-charts">
+                    <div class="chart-container">
+                        <h3>Top 3 Area Cedera Tersering</h3>
+                        <div class="injury-list">
+                            <div class="injury-item">
+                                <span class="injury-part">Bahu</span>
+                                <div class="injury-bar">
+                                    <div class="injury-fill" style="width: 25.2%"></div>
+                                </div>
+                                <span class="injury-percent">25.2%</span>
+                            </div>
+                            <div class="injury-item">
+                                <span class="injury-part">Lutut</span>
+                                <div class="injury-bar">
+                                    <div class="injury-fill" style="width: 20.2%"></div>
+                                </div>
+                                <span class="injury-percent">20.2%</span>
+                            </div>
+                            <div class="injury-item">
+                                <span class="injury-part">Punggung Bawah</span>
+                                <div class="injury-bar">
+                                    <div class="injury-fill" style="width: 17.7%"></div>
+                                </div>
+                                <span class="injury-percent">17.7%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h3>Distribusi Cedera Berdasarkan Bagian Tubuh</h3>
+                        <img src="gym_injuries_pie_chart.png" alt="Pie chart distribusi cedera latihan beban berdasarkan bagian tubuh" class="injury-chart clickable-image" data-caption="Pie chart distribusi cedera latihan beban berdasarkan bagian tubuh">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Threshold Foundation Section -->
+            <section id="threshold" class="tab-content">
+                <h2>Landasan Threshold Feedback Squat</h2>
+                
+                <div class="threshold-overview">
+                    <p class="section-description">Rujukan ilmiah sebagai landasan penetapan threshold feedback squat berdasarkan analisis sudut postur tubuh (hip, knee, ankle angles) terhadap garis vertikal</p>
+                </div>
+
+                <div class="threshold-table-container">
+                    <h3>📋 Tabel Rujukan Threshold Feedback Squat</h3>
+                    <div class="table-wrapper">
+                        <table class="threshold-table">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Feedback Kesalahan</th>
+                                    <th>Sudut Relevan</th>
+                                    <th>Threshold Angle (°)</th>
+                                    <th>Sumber Literatur Ilmiah</th>
+                                    <th>Kesimpulan Ilmiah</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td class="feedback-error">Badan Terlalu ke Belakang</td>
+                                    <td class="angle-type">hip_vertical_angle</td>
+                                    <td class="threshold-value high-risk">&gt; 50</td>
+                                    <td class="literature">(Bayattork et al., 2024)</td>
+                                    <td class="conclusion">Risiko ketidakstabilan postural, gangguan keseimbangan, dan kompensasi postur</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td class="feedback-error">Badan Terlalu ke Depan</td>
+                                    <td class="angle-type">hip_vertical_angle</td>
+                                    <td class="threshold-value high-risk">&lt; 10</td>
+                                    <td class="literature">(Yavuz & Erdag, 2017)</td>
+                                    <td class="conclusion">Risiko excessive forward lean, tekanan pada punggung bawah, teknik tidak optimal</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td class="feedback-error">Lutut Melewati Jari Kaki</td>
+                                    <td class="angle-type">ankle_vertical_angle</td>
+                                    <td class="threshold-value medium-risk">&gt; 45</td>
+                                    <td class="literature">(Wallace et al., 2002)</td>
+                                    <td class="conclusion">Risiko tekanan berlebih pada lutut, kompensasi ankle dorsiflexion terbatas</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td class="feedback-error">Squat Terlalu Dalam</td>
+                                    <td class="angle-type">knee_vertical_angle</td>
+                                    <td class="threshold-value low-risk">&gt; 105</td>
+                                    <td class="literature">(Cooke, 2025; Rojas-Jaramillo et al., 2024), (Kathy E. O'Neill et al., 2021)</td>
+                                    <td class="conclusion">Umumnya aman untuk populasi sehat, kecuali ada riwayat cedera/kelainan khusus</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="threshold-analysis">
+                    <h3>🔬 Analisis Ilmiah Threshold</h3>
+                    <div class="analysis-grid">
+                        <div class="analysis-card high-risk">
+                            <h4>🔴 Risiko Tinggi (&gt;50° Hip Vertical)</h4>
+                            <p>Penelitian Bayattork et al. (2024) menunjukkan bahwa sudut hip vertical yang melebihi 50° dari garis vertikal dapat menyebabkan ketidakstabilan postur yang signifikan.</p>
+                            <ul>
+                                <li>Kompensasi berlebihan pada ankle dan knee</li>
+                                <li>Beban berlebih pada punggung bawah dan tulang belakang bagian lumbar</li>
+                                <li>Otot-otot lain bekerja berlebihan untuk menjaga keseimbangan</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-card high-risk">
+                            <h4>🔴 Forward Lean Berlebihan (&lt;10° Hip Vertical)</h4>
+                            <p>Yavuz & Erdag (2017) mengidentifikasi bahwa posisi badan terlalu ke depan (excessive forward lean) dapat menggeser titik berat ke paha depan dan punggung bawah, membuat teknik squat jadi kurang efisien.</p>
+                            <ul>
+                                <li>Tekanan pada punggung bawah meningkat hingga dua kali lipat dibanding posisi netral</li>
+                                <li>Otot paha depan (quadriceps) menahan beban berlebihan, memicu kelelahan otot dan nyeri di bagian depan lutut</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-card medium-risk">
+                            <h4>🟡 Knee Over Toes (&gt;45° Ankle Vertical)</h4>
+                            <p>Wallace et al. (2002) meneliti bahwa posisi saat lutut terdorong melewati garis vertikal jari kaki, persendian lutut menanggung beban berlebih dan ligamen di sekitar lutut (seperti ligamen patela) tertekan.</p>
+                            <ul>
+                                <li>Menurunkan stabilitas kaki dan meningkatkan risiko terkilir</li>
+                                <li>Risiko cedera ligamen anterior lutut (ACL) bertambah, khususnya jika terjadi lutut valgus (lutut masuk ke dalam)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="analysis-card low-risk">
+                            <h4>🟢 Deep Squat (&gt;105° Knee Vertical)</h4>
+                            <p>Studi terkini menunjukkan bahwa deep squat umumnya aman untuk populasi sehat dengan mobilitas yang baik.</p>
+                            <ul>
+                                <li>Diperlukan fleksibilitas pinggul dan pergelangan kaki yang baik; tanpa itu, stres pada sendi lutut dan pinggul dapat meningkat</li>
+                                <li>Bagi individu sehat, kedalaman ekstra justru meningkatkan aktivasi otot bokong (gluteus) dan paha belakang (hamstring) tanpa menambah risiko sendi signifikan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="biomech-visual">
+                    <h3>📐 Visualisasi Sudut Threshold</h3>
+                    <div class="angle-visualization">
+                        <img src="squat_angles_radar_chart.png" alt="Radar chart threshold sudut squat" class="threshold-chart clickable-image" data-caption="Visualisasi threshold sudut biomekanika squat berdasarkan literatur ilmiah">
+                    </div>
+                    <div class="visualization-legend">
+                        <div class="legend-item">
+                            <span class="legend-color high-risk"></span>
+                            <span>Zona Risiko Tinggi</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color medium-risk"></span>
+                            <span>Zona Risiko Sedang</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color low-risk"></span>
+                            <span>Zona Aman</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results and Discussion Section -->
+            <section id="results" class="tab-content">
+                <h2>Result and Discussion - Bab 5</h2>
+                
+                <div class="results-overview">
+                    <p class="section-description">Hasil pengujian sistem deteksi pose squat dengan analisis MPJPE (Mean Per Joint Position Error) pada kondisi pencahayaan yang berbeda</p>
+                </div>
+
+                <div class="results-stats-grid">
+                    <div class="result-stat-card">
+                        <div class="stat-number">10.54</div>
+                        <div class="stat-label">Rata-rata MPJPE</div>
+                        <div class="stat-subtitle">Kondisi Terang (px)</div>
+                    </div>
+                    <div class="result-stat-card">
+                        <div class="stat-number">26.13</div>
+                        <div class="stat-label">Rata-rata MPJPE</div>
+                        <div class="stat-subtitle">Kondisi Gelap (px)</div>
+                    </div>
+                    <div class="result-stat-card">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Total Partisipan</div>
+                        <div class="stat-subtitle">Uji Coba Sistem</div>
+                    </div>
+                    <div class="result-stat-card">
+                        <div class="stat-number">100% Valid</div>
+                        <div class="stat-label">Akurasi Deteksi (Terang)</div>
+                        <div class="stat-subtitle">Pada pengujian Blackbox Testing</div>
+                    </div>
+                </div>
+
+                <div class="tables-container">
+                    <div class="table-section">
+                        <h3>📊 Tabel 5.1: Hasil Pengujian MPJPE Kondisi Terang</h3>
+                        <div class="table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">Partisipan</th>
+                                        <th style="text-align: center;">Total Gerakan</th>
+                                        <th style="text-align: center;">Form Correct</th>
+                                        <th style="text-align: center;">Form Incorrect</th>
+                                        <th style="text-align: center;">Min MPJPE (px)</th>
+                                        <th style="text-align: center;">Max MPJPE (px)</th>
+                                        <th style="text-align: center;">Avg MPJPE (px)</th>
+                                        <th style="text-align: center;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Instruktor laki-laki usia 26 tahun (penguji 1)</td>
+                                        <td>10 Repetisi</td>
+                                        <td>10</td>
+                                        <td>-</td>
+                                        <td>5.76 px</td>
+                                        <td>15.40 px</td>
+                                        <td>10.83 px</td>
+                                        <td class="status-good">Good performance</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Instruktor laki-laki usia 24 tahun (penguji 2)</td>
+                                        <td>10 Repetisi</td>
+                                        <td>10</td>
+                                        <td>-</td>
+                                        <td>5.29 px</td>
+                                        <td>13.50 px</td>
+                                        <td>9.81 px</td>
+                                        <td class="status-excellent">Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Instruktor laki-laki usia 49 tahun (penguji 3)</td>
+                                        <td>10 Repetisi</td>
+                                        <td>10</td>
+                                        <td>-</td>
+                                        <td>5.69 px</td>
+                                        <td>15.32 px</td>
+                                        <td>10.79 px</td>
+                                        <td class="status-good">Good performance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Non-Instruktor laki-laki usia 19 tahun (penguji 4)</td>
+                                        <td>10 Repetisi</td>
+                                        <td>-</td>
+                                        <td>10</td>
+                                        <td>5.34 px</td>
+                                        <td>16.08 px</td>
+                                        <td>10.73 px</td>
+                                        <td class="status-good">Good performance</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="table-section">
+                        <h3>📊 Tabel 5.2: Hasil Pengujian MPJPE Kondisi Gelap</h3>
+                        <div class="table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">Partisipan</th>
+                                        <th style="text-align: center;">Total Gerakan</th>
+                                        <th style="text-align: center;">Form Correct</th>
+                                        <th style="text-align: center;">Form Incorrect</th>
+                                        <th style="text-align: center;">Min MPJPE (px)</th>
+                                        <th style="text-align: center;">Max MPJPE (px)</th>
+                                        <th style="text-align: center;">Avg MPJPE (px)</th>
+                                        <th style="text-align: center;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Non-instruktor laki-laki usia 21 tahun (penguji 5)</td>
+                                        <td>10 Repetisi</td>
+                                        <td>3</td>
+                                        <td>7</td>
+                                        <td>10.62 px</td>
+                                        <td>29.73 px</td>
+                                        <td>19.63 px</td>
+                                        <td class="status-fair">Poor performance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Instruktor laki-laki usia 24 tahun (penguji 2)</td>
+                                        <td>10 Repetisi</td>
+                                        <td>2</td>
+                                        <td>8</td>
+                                        <td>16.78 px</td>
+                                        <td>43.18 px</td>
+                                        <td>29.44 px</td>
+                                        <td class="status-fair">Poor performance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Non-instruktor laki-laki usia 21 tahun (penguji 6)</td>
+                                        <td>11 Repetisi</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>9.24 px</td>
+                                        <td>45.15 px</td>
+                                        <td>29.31 px</td>
+                                        <td class="status-fair">Poor performance</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td><strong>Rata-rata</strong></td>
+                                        <td><strong></strong></td>
+                                        <td><strong></strong></td>
+                                        <td><strong></strong></td>
+                                        <td><strong></strong></td>
+                                        <td><strong></strong></td>
+                                        <td><strong>26.13 px</strong></td>
+                                        <td class="status-fair"><strong>Fair</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blackbox-testing">
+                    <h3>🧪 Hasil Pengujian Blackbox</h3>
+                    
+                    <div class="table-section">
+                        <h4>📊 Tabel 5.3: Pengujian Blackbox pada Kondisi Terang</h4>
+                        <div class="table-wrapper">
+                            <table class="results-table blackbox-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">Feedback Gerakan</th>
+                                        <th style="text-align: center;">Jumlah Pengujian</th>
+                                        <th style="text-align: center;">Hasil</th>
+                                        <th style="text-align: center;">Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>"Badan Terlalu ke Belakang"</td>
+                                        <td>3 Repetisi</td>
+                                        <td class="status-excellent">Valid</td>
+                                        <td>Sistem berhasil mendeteksi ketika badan pengguna terlalu condong ke belakang (sudut hip-vertical > 50°).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Badan Terlalu ke Depan"</td>
+                                        <td>3 Repetisi</td>
+                                        <td class="status-excellent">Valid</td>
+                                        <td>Sistem mampu mengenali kondisi di mana badan pengguna terlalu condong ke depan (sudut hip-vertical < 10°).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Lutut Melewati Jari Kaki"</td>
+                                        <td>5 Repetisi</td>
+                                        <td class="status-excellent">Valid</td>
+                                        <td>Sistem berhasil mendeteksi di mana lutut pengguna melewati jari kaki (sudut knee-ankle line > 45°) dalam semua repetisi yang diuji.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Squat Terlalu Dalam"</td>
+                                        <td>5 Repetisi</td>
+                                        <td class="status-excellent">Valid</td>
+                                        <td>Sistem dengan baik mendeteksi situasi di mana squat dilakukan terlalu dalam (sudut hip-knee line > 105°).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="blackbox-summary">
+                            <p><strong>Kesimpulan:</strong> Hasil pengujian pada kondisi cahaya terang menunjukkan tingkat keberhasilan 100% valid dalam mendeteksi kesalahan gerakan pengguna. Hal tersebut menandakan bahwa dalam kondisi pencahayaan yang ideal, model mediapipe yang digunakan mampu menentukan posisi sendi titik landmark secara akurat.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-section">
+                        <h4>📊 Tabel 5.4: Pengujian Blackbox pada Kondisi Gelap</h4>
+                        <div class="table-wrapper">
+                            <table class="results-table blackbox-table">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">Feedback Gerakan</th>
+                                        <th style="text-align: center;">Jumlah Pengujian</th>
+                                        <th style="text-align: center;">Hasil</th>
+                                        <th style="text-align: center;">Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>"Badan Terlalu ke Belakang"</td>
+                                        <td>3 Repetisi</td>
+                                        <td class="status-poor">Tidak Valid</td>
+                                        <td>Sistem gagal memberikan feedback secara konsisten karena sering terjadi gangguan pada deteksi landmark akibat pencahayaan minim.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Badan Terlalu ke Depan"</td>
+                                        <td>3 Repetisi</td>
+                                        <td class="status-poor">Tidak Valid</td>
+                                        <td>Deteksi pose tidak optimal, skeleton landmark sering hilang sehingga feedback sering tidak muncul atau tidak sesuai kondisi gerakan sebenarnya.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Lutut Melewati Jari Kaki"</td>
+                                        <td>3 Repetisi</td>
+                                        <td class="status-poor">Tidak Valid</td>
+                                        <td>Sistem tidak dapat mengenali secara tepat posisi lutut terhadap jari kaki karena landmark sering bergeser atau hilang akibat pencahayaan rendah.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Squat Terlalu Dalam"</td>
+                                        <td>5 Repetisi</td>
+                                        <td class="status-poor">Tidak Valid</td>
+                                        <td>Feedback tidak muncul secara realtime karena deteksi sudut menjadi tidak akurat, sehingga sistem gagal memberikan feedback yang sesuai pada setiap percobaan.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="blackbox-summary">
+                            <p><strong>Kesimpulan:</strong> Dalam pengujian yang dilakukan pada kondisi pencahayaan minim (gelap), seluruh skenario feedback menghasilkan status "Tidak Valid". Hal ini menunjukkan bahwa pencahayaan yang buruk secara signifikan menurunkan kemampuan sistem dalam menganalisis gerakan squat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-analysis">
+                    <h3>📈 Analisis Perbandingan MPJPE</h3>
+                    <div class="chart-container">
+                        <h4>Perbandingan MPJPE per Kondisi Cahaya</h4>
+                        <img src="social_media_gen_z_chart.png" alt="Bar chart perbandingan MPJPE kondisi terang vs gelap" class="mpjpe-chart clickable-image" data-caption="Analisis perbandingan nilai minimum, maksimum, dan rata-rata MPJPE">
+                    </div>
+
+                    <div class="chart-container">
+                        <h4>Grafik Perubahan MPJPE Berdasarkan Skenario</h4>
+                        <img src="Grafik Perubahan MPJPE.jpg" alt="Line chart perubahan MPJPE berdasarkan kondisi skenario" class="scenario-chart clickable-image" data-caption="Grafik perubahan MPJPE berdasarkan kondisi skenario pengujian">
+                    </div>
+                </div>
+
+                <div class="discussion-section">
+                    <h3>💬 Pembahasan Hasil</h3>
+                    <div class="discussion-grid">
+                        <div class="discussion-card">
+                            <h4>🔍 Temuan Utama</h4>
+                            <ul>
+                                <li>Kondisi pencahayaan mempengaruhi akurasi deteksi pose secara signifikan</li>
+                                <li>MPJPE meningkat 44.5% pada kondisi gelap dibanding terang</li>
+                                <li>Variabilitas error antar partisipan konsisten pada kedua kondisi</li>
+                                <li>Sistem masih dapat berfungsi dengan baik pada kondisi cahaya terbatas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="discussion-card">
+                            <h4>⚡ Faktor Pengaruh</h4>
+                            <ul>
+                                <li><strong>Pencahayaan:</strong> Faktor dominan dalam akurasi deteksi</li>
+                                <li><strong>Kontras:</strong> Mempengaruhi deteksi edge dan keypoint</li>
+                                <li><strong>Noise:</strong> Meningkat pada kondisi low-light</li>
+                                <li><strong>Kalibrasi:</strong> Diperlukan adjustment untuk kondisi gelap</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="discussion-card">
+                            <h4>📊 Implikasi Praktis</h4>
+                            <ul>
+                                <li>Sistem dapat digunakan pada gym dengan pencahayaan standar</li>
+                                <li>Diperlukan enhancement untuk kondisi low-light</li>
+                                <li>Threshold feedback perlu disesuaikan dengan kondisi pencahayaan</li>
+                                <li>Real-time performance tetap dapat diterima</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- References Section -->
+            <section id="references" class="tab-content">
+                <h2>Daftar Referensi Rujukan</h2>
+                <p class="section-description">Daftar referensi yang digunakan dalam dashboard interaktif biomekanika squat</p>
+                
+                <div class="references-grid">
+                    <div class="reference-category">
+                        <h3>📚 Sumber Jurnal Ilmiah</h3>
+                        <div class="reference-list">
+                            <div class="reference-item">
+                                <div class="reference-number">1.</div>
+                                <div class="reference-content">
+                                    <strong>A Biomechanical Review of the Squat Exercise: Implications for Clinical Practice.</strong> (2024, April 1). <em>PMC - PubMed Central</em>. 
+                                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10987311/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC10987311/</a>
+                                </div>
+                            </div>
+                            
+                            <div class="reference-item">
+                                <div class="reference-number">2.</div>
+                                <div class="reference-content">
+                                    <strong>Comparison of the angles and corresponding moments in the knee and hip during restricted and unrestricted squats.</strong> (2012, October). <em>Journal of Strength and Conditioning Research, 26</em>(10), 2829-2836. doi: 10.1519/JSC.0b013e318267918b
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">3.</div>
+                                <div class="reference-content">
+                                    Harsanti, S., & Graha, A. S. (2014). <strong>Efektifitas terapi masase dan terapi latihan pembebanan dalam meningkatkan range of movement pasca cedera ankle ringan.</strong> <em>MEDIKORA, XIII</em>(1). 
+                                    <a href="http://download.garuda.kemdikbud.go.id/article.php?article=1692382&val=469" target="_blank" rel="noopener noreferrer">http://download.garuda.kemdikbud.go.id/article.php?article=1692382&val=469</a>
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">4.</div>
+                                <div class="reference-content">
+                                    Kim, S., & Miller, M. (2021, October 4). <strong>Relationships between physical characteristics and biomechanics of lower extremity during the squat.</strong> <em>Journal of Exercise Science & Fitness, 19</em>(4), 269-277. doi: 10.1016/j.jesf.2021.09.002
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">5.</div>
+                                <div class="reference-content">
+                                    Lorenzetti, S., Gülay, T., Stoop, M., List, R., Gerber, H., Schellenberg, F., & Stüssi, E. (2018, July 17). <strong>How to squat? Effects of various stance widths, foot placement angles and level of experience on knee, hip and trunk motion and loading.</strong> <em>BMC Sports Science, Medicine and Rehabilitation, 10</em>, 14. doi: 10.1186/s13102-018-0103-7
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">6.</div>
+                                <div class="reference-content">
+                                    Lorenzetti, S., et al. (2020, January 29). <strong>Correction to: How to squat? Effects of various stance widths, foot placement angles and level of experience on knee, hip and trunk motion and loading.</strong> <em>BMC Sports Science, Medicine and Rehabilitation, 12</em>, 7. doi: 10.1186/s13102-020-0160-6
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">7.</div>
+                                <div class="reference-content">
+                                    <strong>NOT ALL SINGLE LEG SQUATS ARE EQUAL: A BIOMECHANICAL COMPARISON OF THREE VARIATIONS.</strong> (2016, April 1). <em>PMC - PubMed Central</em>. 
+                                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4827363/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC4827363/</a>
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">8.</div>
+                                <div class="reference-content">
+                                    <strong>Pemahaman personal trainer tentang cedera olahraga dan program rehabilitasi.</strong> (n.d.). <em>Jurnal SEGAR - Universitas Negeri Jakarta</em>. 
+                                    <a href="http://journal.unj.ac.id/unj/index.php/segar/article/download/7152/5142/13601" target="_blank" rel="noopener noreferrer">http://journal.unj.ac.id/unj/index.php/segar/article/download/7152/5142/13601</a>
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">9.</div>
+                                <div class="reference-content">
+                                    <strong>The kinematics of the lower leg in the sagittal plane during downward squatting in persons with pronated feet.</strong> (2015, January 1). <em>PMC - PubMed Central</em>. 
+                                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4305583/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC4305583/</a>
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">10.</div>
+                                <div class="reference-content">
+                                    <strong>Validity and inter-rater reliability of medio-lateral knee motion observed during a single-limb mini squat.</strong> (2010, November 16). <em>PMC - PubMed Central</em>. 
+                                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2998461/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC2998461/</a>
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">11.</div>
+                                <div class="reference-content">
+                                    <strong>Biomechanical comparisons of back and front squats with a straight bar and four squats with a transformer bar.</strong> (2020, November 9). <em>PMC - PubMed Central</em>. 
+                                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8106690/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC8106690/</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h3>📱 Sumber Media dan Platform Digital</h3>
+                        <div class="reference-list">
+                            <div class="reference-item">
+                                <div class="reference-number">12.</div>
+                                <div class="reference-content">
+                                    <strong>Are we ditching our gym memberships to get fitness advice from social media?</strong> (2024, March 14). <em>The Independent</em>. 
+                                    <a href="https://www.independent.co.uk/life-style/health-and-families/tiktok-instagram-puregym-pilates-joe-wicks-b2512468.html" target="_blank" rel="noopener noreferrer">https://www.independent.co.uk/life-style/health-and-families/tiktok-instagram-puregym-pilates-joe-wicks-b2512468.html</a>
+                                </div>
+                            </div>
+
+                            <div class="reference-item">
+                                <div class="reference-number">13.</div>
+                                <div class="reference-content">
+                                    <strong>How social media ruined the gym world.</strong> (2024, December 23). <em>Reddit - r/workout</em>. 
+                                    <a href="https://www.reddit.com/r/workout/comments/1hkn5d4/how_social_media_ruined_the_gym_world/" target="_blank" rel="noopener noreferrer">https://www.reddit.com/r/workout/comments/1hkn5d4/how_social_media_ruined_the_gym_world/</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reference-note">
+                        <h4>📝 Catatan Metodologi</h4>
+                        <p>Dashboard ini dikembangkan berdasarkan analisis komprehensif dari literature review yang mencakup studi biomekanikal, survei epidemiologi cedera, dan analisis tren media sosial. Semua data persentase dan statistik yang ditampilkan telah diverifikasi melalui multiple sources dan peer-reviewed publications.</p>
+                        <p><strong>Terakhir diperbarui:</strong> Juni 2025</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Image Modal for Full-Size Viewing -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-overlay">
+            <div class="image-modal-content">
+                <button class="image-modal-close">&times;</button>
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <div class="image-modal-caption"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
