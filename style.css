@@ -795,6 +795,28 @@ select.form-control {
   text-align: center;
 }
 
+.chart-analysis .overview-charts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+}
+
+@media (min-width: 769px) {
+    .chart-analysis .overview-charts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.chart-analysis .chart-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.discussion-section {
+    margin-top: var(--space-32);
+}
+
 /* Injury List */
 .injury-list {
   display: flex;
@@ -2377,7 +2399,7 @@ select.form-control {
   bottom: 0;
   background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
   opacity: 0.1;
-  animation: shimmer 1s ease-in-out;
+  animation: shimmer  1s ease-in-out;
 }
 
 @keyframes shimmer {
@@ -2385,238 +2407,365 @@ select.form-control {
   100% { transform: translateX(100%); }
 }
 
-/* ===== TABLET RESPONSIVE (768px - 1024px) ===== */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .chart-analysis .chart-container {
-    margin-bottom: var(--space-20);
-  }
-  
-  .chart-analysis .chart-container img {
-    max-width: 450px;
-  }
-  
-  .overview-charts .chart-container img {
-    max-width: 350px;
-  }
-  
-  .analysis-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-20);
-  }
-  
-  .discussion-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-20);
-  }
+/* ===== CONCLUSION SECTION STYLES ===== */
+.conclusion-overview {
+  margin-bottom: var(--space-32);
+  text-align: center;
 }
 
-/* ===== MOBILE RESPONSIVE BLACKBOX TABLES ===== */
-@media (max-width: 768px) {
-  /* ...existing code... */
-  
-  /* Chart Analysis Responsive */
-  .chart-analysis {
-    margin-bottom: var(--space-24);
-  }
-  
-  .chart-analysis .chart-container {
-    margin-bottom: var(--space-16);
-  }
-  
-  .chart-analysis .chart-container img {
-    max-width: 100%;
-    max-height: 300px; /* Batasi tinggi chart pada mobile */
-    height: auto;
-    object-fit: contain;
-  }
-  
-  /* Overview Charts Responsive */
-  .overview-charts {
-    margin-top: var(--space-20);
-  }
-  
-  .overview-charts .chart-container {
-    margin-bottom: var(--space-16);
-  }
-  
-  .overview-charts .chart-container img {
-    max-width: 100%;
-    max-height: 250px; /* Batasi tinggi untuk overview charts */
-    height: auto;
-  }
-  
-  /* Discussion Grid to Single Column */
-  .discussion-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-16);
-  }
-  
-  /* Analysis Grid to Single Column */
-  .analysis-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-16);
-  }
-  
-  /* Tables Container Horizontal Scroll */
-  .table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-  }
-  
-  .threshold-table,
-  .results-table {
-    min-width: 800px; /* Minimum width untuk mempertahankan struktur tabel */
-  }
-  
-  /* Stats Grid Responsive */
-  .stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-16);
-  }
-  
-  .results-stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-16);
-  }
-}
-
-/* ===== CHART IMAGES RESPONSIVE STYLING ===== */
-.injury-chart,
-.social-chart,
-.threshold-chart,
-.biomech-chart,
-.mpjpe-chart,
-.scenario-chart {
-  width: 100%;
-  max-width: 600px; /* Batasi ukuran maksimum chart */
-  height: auto;
-  display: block;
+.conclusion-main {
+  max-width: 1200px;
   margin: 0 auto;
-  border-radius: var(--radius-base);
-  object-fit: contain;
 }
 
-/* Khusus untuk chart di section results */
-#results .chart-container img {
-  max-width: 500px; /* Lebih kecil untuk chart MPJPE */
+.conclusion-section {
+  margin-bottom: var(--space-32);
 }
 
-/* Khusus untuk chart di overview */
-#overview .chart-container img {
-  max-width: 400px; /* Sesuaikan dengan ukuran injury list */
+.conclusion-section h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-20);
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
 }
 
-/* Chart Container Improvements */
-.chart-container {
+.conclusion-content {
   background: var(--color-surface);
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-lg);
   padding: var(--space-24);
-  margin-bottom: var(--space-24);
-  max-width: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.conclusion-content:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.conclusion-content p {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-20);
+  color: var(--color-text);
+}
+
+.conclusion-content p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-success {
+  background: rgba(var(--color-success-rgb), 0.15);
+  color: var(--color-success);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.highlight-metric {
+  background: rgba(var(--color-primary), 0.15);
+  color: var(--color-primary);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.highlight-warning {
+  background: rgba(var(--color-warning-rgb), 0.15);
+  color: var(--color-warning);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mode-tag {
+  background: var(--color-secondary);
+  color: var(--color-text);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border);
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-20);
+  margin: var(--space-32) 0;
+}
+
+.achievement-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
   overflow: hidden;
 }
 
-.chart-container h3,
-.chart-container h4 {
-  margin-bottom: var(--space-16);
-  color: var(--color-text);
-  text-align: center;
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-success));
 }
 
-/* Chart Analysis Layout */
-.chart-analysis {
-  margin-bottom: var(--space-32);
-}
-
-.chart-analysis h3 {
-  margin-bottom: var(--space-24);
-  text-align: center;
-  color: var(--color-text);
-}
-
-/* Khusus chart analysis untuk layout side-by-side pada desktop */
-@media (min-width: 769px) {
-  .chart-analysis > h3 {
-    grid-column: 1 / -1;
-  }
-  
-  .chart-analysis .chart-container {
-    max-width: 48%;
-    margin-right: 2%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .chart-analysis .chart-container:last-child {
-    margin-right: 0;
-  }
-  
-  .chart-analysis .chart-container img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* Responsive Images for all chart types */
-img.clickable-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: var(--radius-base);
-  transition: transform var(--duration-normal) var(--ease-standard), 
-              box-shadow var(--duration-normal) var(--ease-standard);
-}
-
-img.clickable-image:hover {
-  transform: scale(1.02);
+.achievement-card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
+.achievement-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-16);
+  display: block;
+}
+
+.achievement-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
+.achievement-desc {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+/* Suggestions Section */
+.suggestions-section {
+  background: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  margin-top: var(--space-32);
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-20);
+  margin-top: var(--space-24);
+}
+
+.suggestion-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.suggestion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.suggestion-card.wide-card {
+  grid-column: 1 / -1;
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+.suggestion-icon {
+  font-size: var(--font-size-2xl);
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.suggestion-card h4 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+.suggestion-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Future Impact Section */
+.future-impact {
+  margin-top: var(--space-32);
+  padding: var(--space-32);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-success));
+  border-radius: var(--radius-lg);
+  color: var(--color-btn-primary-text);
+}
+
+.future-impact h3 {
+  color: var(--color-btn-primary-text);
+  text-align: center;
+  margin-bottom: var(--space-24);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-20);
+}
+
+.impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-20);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.impact-icon {
+  font-size: var(--font-size-2xl);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.impact-content h4 {
+  color: var(--color-btn-primary-text);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-semibold);
+}
+
+.impact-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Dark mode adjustments for conclusion section */
+[data-color-scheme="dark"] .conclusion-content {
+  background: var(--color-surface);
+  border-color: var(--color-card-border);
+}
+
+[data-color-scheme="dark"] .achievement-card,
+[data-color-scheme="dark"] .suggestion-card {
+  background: var(--color-surface);
+  border-color: var(--color-card-border);
+}
+
+[data-color-scheme="dark"] .suggestions-section {
+  background: var(--color-secondary);
+}
+
+[data-color-scheme="dark"] .highlight-success {
+  background: rgba(var(--color-success-rgb), 0.2);
+  color: var(--color-success);
+}
+
+[data-color-scheme="dark"] .highlight-metric {
+  background: rgba(var(--color-primary), 0.2);
+  color: var(--color-primary);
+}
+
+[data-color-scheme="dark"] .highlight-warning {
+  background: rgba(var(--color-warning-rgb), 0.2);
+  color: var(--color-warning);
+}
+
+[data-color-scheme="dark"] .mode-tag {
+  background: var(--color-secondary);
+  border-color: var(--color-border);
+}
+
+/* Responsive Design for Conclusion Section */
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+  }
+  
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+  }
+  
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+  }
+  
+  .suggestion-card.wide-card {
+    grid-column: 1;
+  }
+  
+  .conclusion-content {
+    padding: var(--space-20);
+  }
+  
+  .suggestions-section {
+    padding: var(--space-24);
+    margin-top: var(--space-24);
+  }
+  
+  .future-impact {
+    padding: var(--space-24);
+    margin-top: var(--space-24);
+  }
+  
+  .conclusion-content p {
+    font-size: var(--font-size-base);
+  }
+  
+  .impact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .impact-icon {
+    align-self: center;
+  }
+}
+
 @media (max-width: 480px) {
-  /* ...existing code... */
-  
-  /* Extra small screens - smaller charts */
-  .chart-container {
-    padding: var(--space-16);
-    margin-bottom: var(--space-16);
+  .suggestion-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-8);
   }
   
-  .chart-container h3,
-  .chart-container h4 {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--space-12);
+  .achievement-card {
+    padding: var(--space-20);
   }
   
-  /* Smaller stats cards */
-  .stat-card,
-  .result-stat-card {
-    padding: var(--space-16);
-  }
-  
-  .stat-number {
-    font-size: var(--font-size-3xl);
-  }
-  
-  .stat-number.decimal {
-    font-size: var(--font-size-2xl);
-  }
-  
-  /* Compact table styling */
-  .threshold-table,
-  .results-table {
-    min-width: 700px;
-    font-size: var(--font-size-xs);
-  }
-  
-  .threshold-table th,
-  .threshold-table td,
-  .results-table th,
-  .results-table td {
-    padding: var(--space-8) var(--space-10);
+  .suggestion-card {
+    padding: var(--space-20);
   }
 }
